@@ -1,5 +1,5 @@
 function formController($scope, $http) {
-  $scope.title = "Accueil";
+  $scope.title = "Hey!";
   var data = {};
   $scope.firstTime = false;
   var map = L.map('map').setView([35.47, -97.52], 13);                     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
