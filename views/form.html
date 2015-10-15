@@ -1,16 +1,17 @@
 <div id ="wrap">
 
-		<h1>{{title}}</h1>
+  <h1>{{title}}</h1>
 
-		<form ng-submit="sendForm()">
-		  	<input type="text" placeholder="localisation" ng-model="form">
-		  	<button type="submit">send</button>
-		</form>
+  <form ng-submit="sendForm()">
+      <input type="text" placeholder="Où tu vas ?" ng-model="form">
+      <button type="submit">Balance !</button>
+  </form>
 
-		<img ng-show="image" src="">
+  <img ng-show="image" src="">
+  <p ng-show="image">Il fera {{temperature}} degrés !</p>
 
-		<p ng-show="nm">Le niveau de plus haute mer astronomique de {{title}} est {{nm}} mètres.</p>
+  <p ng-show="nm">Le niveau de plus haute mer astronomique de {{title}} est {{nm}} mètres ! <span ng-show="big">Wow !</span><span ng-show="huge">OMG !</span></p>
 
-		<div ng-show="firstTime" id="map"></div>
+  <div ng-show="firstTime" id="map"></div>
 		
 </div>

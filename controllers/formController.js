@@ -2,13 +2,21 @@ function formController($scope, $http) {
   $scope.title = "Hey!";
   var data = {};
   $scope.firstTime = false;
-  var map = L.map('map').setView([35.47, -97.52], 13);                     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
+  
+  var mapboxTiles = L.tileLayer('https://api.mapbox.com/v4/balthazar.nnbl166e/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiYmFsdGhhemFyIiwiYSI6ImNpZnNub2kxdDAxdjZ0ZG0wZm51amJhaXMifQ.Ltgv_P4UktIZJRGjurLGBg', {
+    attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
+});
+  
+  var map = L.map('map')
+    .addLayer(mapboxTiles)
+    .setView([42.3610, -71.0587], 12);
   
   function updateWeather(weather) {
     var icon = weather.icon;
     var image = document.querySelector("img");
     image.src = "http://openweathermap.org/img/w/" + icon + ".png";
     $scope.image = true;
+    $scope.temperature = Math.round(data.main.temp);
   }
   
   function updateMap(coord) {
@@ -23,6 +31,12 @@ function formController($scope, $http) {
     while (i < len) {
       if (shom.records[i].fields.site == data.name) {
         $scope.nm = shom.records[i].fields.phma;
+        $scope.big = false;
+        $scope.huge = false;
+        if ($scope.nm > 300 && $scope.nm < 1000)
+          $scope.big = true;
+        if ($scope.nm > 1000)
+          $scope.huge = true;
         return
       }
       ++i;
