@@ -35,8 +35,33 @@ h1 {
 
 p {
   font-family:Helvetica;
-  color: #024A24;
+  color: #0B486B;
   font-weight: 700;
   font-size: 18px;
   margin: 10px;
+}
+
+input {
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  font-family:'Paytone One', sans-serif;
+  text-align: center;
+  vertical-align: middle;
+}
+
+button {
+  height: 38px;
+  vertical-align: middle;
+  font-size: 16px;
+  font-family:'Paytone One', sans-serif;
+  color:#ffb400;
+}
+
+input:focus {
+  outline: none;
+}
+
+img {
+  margin-bottom: -20px;
 }

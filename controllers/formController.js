@@ -20,6 +20,7 @@ function formController($scope, $http) {
   }
   
   function updateMap(coord) {
+    map.resize;
     map.panTo(new L.LatLng(coord.lat, coord.lon));
     $scope.firstTime = true;
   }
