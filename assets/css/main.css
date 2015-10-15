@@ -1,4 +1,38 @@
+html {
+	height:100%;
+}
+
+body {
+	background-color:#ffe400;
+	background-repeat:repeat;
+	height:100%;
+}
+
+h1 {
+	width:100%;
+	margin-top:0px;
+	font-family:'Paytone One', sans-serif;
+	color:#ffb400;
+	font-size:4em;
+}
+
+#wrap {
+	height:90%;
+	width:90%;
+	margin:auto;
+	text-align: center;
+	background-color:#67d6cd;
+	border:1.5em solid #ffffff;
+	border-radius:2em;
+}
+
 #map {
-  height: 500px;
-  max-width: 500px;
+  height:50%;
+  max-width:50%;
+  margin:auto;
+}
+
+p {
+	font-family:Helvetica;
+	color:#ffffff;
 }
