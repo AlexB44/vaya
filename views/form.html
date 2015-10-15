@@ -1,11 +1,18 @@
-<h1>{{title}}</h1>
- <form ng-submit="sendForm()">
-  <input type="text" placeholder="localisation" ng-model="form">
-  <button type="submit">send</button>
-</form>
 
-<img ng-show="image" src="">
+<div class ="wrap">
+	<div class ="content">
 
-<p ng-show="nm">Le niveau de plus haute mer astronomique de {{title}} est {{nm}} mètres.</p>
+		<h1>{{title}}</h1>
 
-<div ng-show="firstTime" id="map"></div>
+		<form ng-submit="sendForm()">
+		  	<input type="text" placeholder="localisation" ng-model="form">
+		  	<button type="submit">send</button>
+		</form>
+
+		<img ng-show="image" src="">
+
+		<p ng-show="nm">Le niveau de plus haute mer astronomique de {{title}} est {{nm}} mètres.</p>
+
+		<div ng-show="firstTime" id="map"></div>
+	</div>
+</div>
