@@ -10,11 +10,16 @@ body {
 }
 
 h1 {
-  width:100%;
-  margin-top:0px;
   font-family:'Paytone One', sans-serif;
   color:#ffb400;
   font-size:4em;
+  display: inline-block;
+  width: auto;
+  background-color: #FFF;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  margin-top: 10px;
 }
 
 #wrap {
@@ -31,6 +36,7 @@ h1 {
   height:50%;
   max-width:50%;
   margin:auto;
+  border-radius: 20px;
 }
 
 p {
@@ -48,6 +54,8 @@ input {
   font-family:'Paytone One', sans-serif;
   text-align: center;
   vertical-align: middle;
+  border-radius: 10px;
+  border: solid 1px #dcdcdc;
 }
 
 button {
@@ -55,7 +63,10 @@ button {
   vertical-align: middle;
   font-size: 16px;
   font-family:'Paytone One', sans-serif;
-  color:#ffb400;
+  color: #ffb400;
+  border-radius: 10px;
+  border: solid 1px #dcdcdc;
+  background-color: #fff;
 }
 
 input:focus {
@@ -64,4 +75,15 @@ input:focus {
 
 img {
   margin-bottom: -20px;
+}
+
+.marinette {
+  height: 300px;
+  position: absolute;
+  left: 10%;
+  bottom: 100px;
+}
+
+.smiley {
+  height: 450px;
 }

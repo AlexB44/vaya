@@ -3,9 +3,7 @@ function formController($scope, $http) {
   var data = {};
   $scope.firstTime = false;
   
-  var mapboxTiles = L.tileLayer('https://api.mapbox.com/v4/balthazar.nnbl166e/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiYmFsdGhhemFyIiwiYSI6ImNpZnNub2kxdDAxdjZ0ZG0wZm51amJhaXMifQ.Ltgv_P4UktIZJRGjurLGBg', {
-    attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
-});
+  var mapboxTiles = L.tileLayer('https://api.mapbox.com/v4/balthazar.nnbl166e/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiYmFsdGhhemFyIiwiYSI6ImNpZnNub2kxdDAxdjZ0ZG0wZm51amJhaXMifQ.Ltgv_P4UktIZJRGjurLGBg');
   
   var map = L.map('map')
     .addLayer(mapboxTiles)
@@ -17,6 +15,11 @@ function formController($scope, $http) {
     image.src = "http://openweathermap.org/img/w/" + icon + ".png";
     $scope.image = true;
     $scope.temperature = Math.round(data.main.temp);
+    var marinette = document.querySelector('.marinette');
+    if (Math.round(data.main.temp) > 15)
+      marinette.src = "http://i.imgur.com/BSAdK4t.png";
+    else
+      marinette.src = "http://i.imgur.com/yeFOLfP.png";
   }
   
   function updateMap(coord) {
